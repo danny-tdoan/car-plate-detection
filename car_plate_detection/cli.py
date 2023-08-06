@@ -1,4 +1,4 @@
-"""CLI interface for project_name project.
+"""CLI interface for car_plate_detection project.
 
 Be creative! do whatever you want!
 
@@ -12,7 +12,7 @@ Be creative! do whatever you want!
 def main():  # pragma: no cover
     """
     The main function executes on commands:
-    `python -m project_name` and `$ project_name `.
+    `python -m car_plate_detection` and `$ car_plate_detection `.
 
     This is your program's entry point.
 

@@ -1,5 +1,5 @@
-from project_name.base import NAME
+from car_plate_detection.base import NAME
 
 
 def test_base():
-    assert NAME == "project_name"
+    assert NAME == "car_plate_detection"
