@@ -2,6 +2,8 @@ import numpy as np
 import tensorflow as tf
 import pathlib
 import cv2
+from importlib import resources as impresources
+
 
 def load_model(path):
   return tf.saved_model.load(path)
@@ -91,5 +93,12 @@ def detect_single_image(interpreter,image_mat):
 
 if __name__ == '__main__':
     # load the interpreter
+    test_path = str(impresources.files('car_plate_detection')/'model')
+    interpreter = load_interpreter(f"{test_path}/yolov7_tiny_model_float16.tflite")
 
-    # run inference
+    # load an image and run inference
+    image = cv2.imread(f"{test_path}/image2.jpg")
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+    plate = detect_single_image(interpreter,image)
+    #
