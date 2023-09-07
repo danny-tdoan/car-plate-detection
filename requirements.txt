@@ -10,5 +10,7 @@ fastapi
 uvicorn
 python-multipart
 opencv-contrib-python
-tensorflow
+tensorflow==2.10.0
 numpy
+paddlepaddle
+paddleocr>=2.0.1
